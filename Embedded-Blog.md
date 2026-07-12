@@ -3,59 +3,28 @@ layout: default
 title: Technical Vault
 ---
 
-<!-- 
-====================================================================================
-📝 INVISIBLE REUSABLE SYMBOLS CHEAT SHEET (HOW TO USE MARKDOWN SYMBOLS)
-This section is a comment. It is completely hidden on your compiled public website!
-====================================================================================
-
-# (Hashtag + Space) 
--> MAIN WORKBOOK TITLE: Use this exactly ONCE at the absolute top of your document files.
-
-## (Two Hashtags + Space) 
--> MAJOR CHAPTER DIRECTORIES: Use this to mark distinct major subjects (like Embedded C vs Drivers).
-
-### (Three Hashtags + Space) 
--> QUESTION MODULE HEADERS: Type this before any question. Your CSS overrides it instantly, 
-   painting it GeeksforGeeks Green and appending a 🟢 dot icon ahead of your line automatically.
-
---- (Three Dashes in a single row) 
--> PAGE DIVIDER SEGMENT: Draws a full-width line across screens to slice up separate questions.
-
-* (Asterisk + Space) or - (Dash + Space)
--> DYNAMIC LINK DIRECTORY BULLETS: Used to map your floating menu items. Indenting these links 
-   using spacing tracks sub-hierarchies ("Embedded C" -> "Questions Answers:" -> "Clickable Link").
-
-> (Greater Than Sign + Space) 
--> INTERVIEW STUDY CALLOUT BOX: Converts standard paragraphs instantly into green tip containers.
-
-```c ... ``` (Three Backticks on separate rows encapsulation)
--> SYNTAX HIGH-LIGHTED CODE BLOCKS: Embeds C firmware scripts inside clean engineering boxes.
-
-![Alternate Text Description Here](./images/your_file.png)
--> AUTOMATED IMAGE CENTERING LOADER: Place this link format to render driver design charts. 
-   Your CSS intercepts this call to center graphics and trace border frames with zero html.
-
-<span class="my-sym">ANY_EMOJI_OR_CHARACTER_HERE</span>
--> USER-DEFINED VARIABLE SYMBOL: Wrap any custom symbol or icon inside this span tag. 
-   The CSS will format and align it instantly to match your theme!
-
-====================================================================================
--->
-
 # 🐧 Embedded Engineering Q&A Vault
 
 <!-- 
-  AUTOMATED LEFT-SIDE FLOATING NAVIGATION MENU
-  Use standard text asterisks (*) and spaces to indent your sub-questions.
-  Make sure your (#links) are all lowercase, with dashes instead of spaces.
+  ========================================================================
+  🎯 GEEKSFORGEEKS INTERACTIVE TOP TOGGLE BLOCK
+  This creates a clickable "View Question Menu" button bar that reveals
+  or hides your question list smoothly on click.
+  ========================================================================
 -->
-* **Embedded C:**
-  * Questions Answers:
-    * [Q1. What's Volatile?](#q1-whats-volatile)
-* **Device Driver:**
-  * Questions Answers:
-    * [Q1. What's a Device Driver?](#q1-whats-a-device-driver)
+<details class="gfg-toggle-panel" style="margin-bottom: 30px;">
+  <summary class="gfg-toggle-btn">🔍 View / Hide Question Menu Directory</summary>
+  <div class="gfg-toggle-content" style="padding: 15px; background: #ffffff; border-radius: 6px; margin-top: 10px; border: 1px solid #e0e0e0; border-left: 4px solid #2f8d46;">
+
+  * **Embedded C:**
+    * Questions Answers:
+      * [Q1. What's Volatile?](#q1-whats-volatile)
+  * **Device Driver:**
+    * Questions Answers:
+      * [Q1. What's a Device Driver?](#q1-whats-a-device-driver)
+
+  </div>
+</details>
 
 ---
 
@@ -64,16 +33,14 @@ This section is a comment. It is completely hidden on your compiled public websi
 ### Q1. What's Volatile?
 
 * **Ans:** The `volatile` keyword tells the compiler optimizer that a variable's value can change at any moment outside the control of the running source code block.
-* This explicitly forces the CPU architecture to re-fetch the variable contents directly from actual physical memory space arrays every single time it is accessed, bypassing unsafe compiler cache variables.
-* <span class="my-sym">⭐</span> Important validation marker.
-* <span class="my-sym">⚡</span> Register specific notice.
+* This explicitly forces the CPU architecture to re-fetch the variable contents directly from actual physical memory space arrays every single time it is accessed.
 
 ```c
 volatile uint32_t *status_reg = (uint32_t *)0x40003000;
 while (*status_reg == 0); 
 ```
 
-> **Interview Tip:** Always apply `volatile` attributes when tracing memory-mapped input/output address bounds, managing tracking flags modified deep inside an ISR context, or sharing parameters between different execution blocks inside a multi-threaded RTOS environment.
+> **Interview Tip:** Always apply `volatile` attributes when tracing memory-mapped input/output address bounds.
 
 ---
 
@@ -81,23 +48,7 @@ while (*status_reg == 0);
 
 ### Q1. What's a Device Driver?
 
-* **Ans:** A device driver is a highly specialized kernel-space software framework module that operates as a direct translator between the core operating system kernel architecture and specific external physical hardware assets.
-* It wraps complex pin register mechanics into universal software models so that user applications can use unified file handling routines like `open()`, `read()`, and `write()`.
+* **Ans:** A device driver is a highly specialized kernel-space software framework module that operates as a direct translator between the core operating system kernel and specific hardware assets.
 
 #### Driver-to-Hardware Architecture Diagram:
 ![Device Driver Architecture Flowchart](./images/driver_flow.png)
-
-> **Interview Tip:** Writing custom device driver code blocks demands rigorous memory verification methodologies. Because driver processes operate inside un-sandboxed kernel-space boundaries, a single pointer leak or memory race fault will execute a full-scale operating system crash (Kernel Panic).
-```
-
----
-
-### 🚀 Push to Your Server
-1. Open the left sidebar **Source Control Panel** inside VS Code (`Ctrl + Shift + G`).
-2. Click the **`+` (plus sign)** to stage your modifications across your project files.
-3. Type your commit message: `Completed scrollbar engine integration on native jekyll sidebar layout` and select **Commit** > **Push**.
-4. Open your live page layout link (`https://github.io`) and clear your browser cache using **`Ctrl + F5`**.
-
-Everything is structurally optimized. Your left side menu will stay completely locked on the screen with its scrolling mechanism active, and all standard theme footprints are hidden! 
-
-Let me know if your browser **renders the clean, independent scrollable side tree layout** perfectly now!
