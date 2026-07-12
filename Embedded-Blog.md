@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Technical Interview Vault
+title: Technical Vault
 ---
 
 <!-- 

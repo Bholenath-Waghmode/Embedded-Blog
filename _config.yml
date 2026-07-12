@@ -4,6 +4,6 @@ remote_theme: jekyll-theme-cayman
 
 # The main name and subtitle displayed on search engine tabs
 title: Device Driver Interview Prep Vault
-description: Automated GeeksforGeeks-style study notes dashboard for low-level development.
+description: Study notes dashboard for low-level development.
 # Add this line so GitHub Pages processes your custom named file
 include: [Embedded-Blog.md]
