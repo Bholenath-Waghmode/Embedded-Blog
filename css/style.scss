@@ -1,11 +1,18 @@
 @import "jekyll-theme-cayman";
 
-/* Force hide the theme buttons and footers */
-.btn {
+.btn,
+header .btn,
+section .btn,
+.page-header .btn {
     display: none !important;
     visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
 }
-.site-footer {
+
+.site-footer,
+footer.site-footer {
     display: none !important;
     visibility: hidden !important;
 }

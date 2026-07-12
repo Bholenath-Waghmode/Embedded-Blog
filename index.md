@@ -12,6 +12,5 @@ This is my central knowledge repository for low-level systems engineering, firmw
 *   🔗 **[Go to My Embedded C & Device Driver Vault](./Embedded-Blog.html)**
     *   Click this link to explore my complete, GeeksforGeeks-style interactive notebook covering memory tracking, register alignments, volatile keywords, and hardware synchronization structures.
 
----
-
-> **Portfolio Tip:** All notes contained across this workspace are version-controlled, maintained inside isolated markdown files, and pushed directly from my local development platform via Git tracking automation engines.
+<div id="sidebar-menu" style="display:none;"></div>
+<main id="markdown-content" style="display:none;"></main>

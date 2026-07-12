@@ -36,7 +36,7 @@ This section is a comment. It is completely hidden on your compiled public websi
 -> AUTOMATED IMAGE CENTERING LOADER: Place this link format to render driver design charts. 
    Your CSS intercepts this call to center graphics and trace border frames with zero html.
 
-<span class="my-sym">ANY_EMOJI_OR_CHARACTER_HERE</span>
+<span class="my-sym">ANY_EMOJI_OR_CHARACTER_HERE</span>a
 -> USER-DEFINED VARIABLE SYMBOL: Wrap any custom symbol or icon inside this span tag. 
    The CSS will format and align it instantly to match your theme!
 
