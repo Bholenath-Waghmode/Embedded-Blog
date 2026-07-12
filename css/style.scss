@@ -1,4 +1,16 @@
-/* --- 1. THE MAIN PAGE STRUCTURE --- */
+@import "jekyll-theme-cayman";
+
+/* Force hide the theme buttons and footers */
+.btn {
+    display: none !important;
+    visibility: hidden !important;
+}
+.site-footer {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* --- 2. THE MAIN PAGE STRUCTURE --- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: #333333;
@@ -8,8 +20,8 @@ body {
     max-width: 750px; /* Keeps text columns narrow and comfortable to read */
 }
 
-/* --- 2. AUTOMATIC MULTI-TIER FLOATING SIDEBAR NAVIGATION MENU --- */
-#sidebar-menu {
+/* --- 3. AUTOMATIC MULTI-TIER FLOATING SIDEBAR NAVIGATION MENU --- */
+body > ul:first-of-type {
     position: fixed; /* Locks the menu to the screen window so it stays visible while scrolling */
     left: 20px;
     top: 50px;
@@ -21,63 +33,46 @@ body {
     border-radius: 6px;
     border-left: 4px solid #2f8d46; /* Signature GeeksforGeeks Green left border */
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    list-style-type: none; /* Removes standard black list dots from the sidebar menu */
 }
 
-.menu-loading {
-    color: #777777;
-    font-size: 0.9rem;
-    font-style: italic;
-}
-
-/* Formats the bold category titles (Embedded C, Device Driver) inside the sidebar menu */
-#sidebar-menu strong {
+body > ul:first-of-type strong {
     color: #2f8d46;
     font-size: 1rem;
     display: block;
-    margin-top: 14px;
+    margin-top: 10px;
 }
 
-/* Indents the sub-headings ("Questions Answers:") cleanly */
-#sidebar-menu ul {
+body > ul:first-of-type ul {
     padding-left: 12px;
     list-style-type: none;
-    margin: 4px 0;
-}
-
-.submenu-header {
     color: #777777;
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
-/* Indentation for individual clickable sub-questions inside the menu */
-#sidebar-menu ul ul {
+body > ul:first-of-type ul ul {
     padding-left: 10px;
-    margin-top: 2px;
+    text-transform: none; 
+    font-weight: normal;
 }
 
-#sidebar-menu li {
-    margin-bottom: 5px;
-}
-
-/* Formatting for individual clickable question hyperlinks */
-#sidebar-menu a {
+body > ul:first-of-type a {
     color: #555555;
     text-decoration: none;
     font-size: 0.9rem;
     display: block;
-    line-height: 1.3;
+    padding: 4px 0;
 }
 
-/* Turns individual menu links green and adds an underline when the cursor hovers over them */
-#sidebar-menu a:hover {
+body > ul:first-of-type a:hover {
     color: #2f8d46;
     text-decoration: underline;
 }
 
-/* --- 3. CONTENT TITLES AND GREEN QUESTIONS --- */
+/* --- 4. CONTENT TITLES AND GREEN QUESTIONS --- */
 h2 {
     color: #333333;
     font-size: 1.5rem;
@@ -90,7 +85,6 @@ h3 {
     border-bottom: 2px solid #e0e0e0; /* Draws a solid separator rule line under questions */
     padding-bottom: 6px;
     margin-top: 30px;
-    scroll-margin-top: 60px; /* Prevents text cutting when jumping via sidebar links */
 }
 
 h3::before {
@@ -98,7 +92,7 @@ h3::before {
     font-size: 1.1rem;
 }
 
-/* --- 4. USER-DEFINED VARIABLE CUSTOM SYMBOLS --- */
+/* --- 5. USER-DEFINED VARIABLE CUSTOM SYMBOLS --- */
 .my-sym {
     color: #2f8d46; 
     font-size: 1.2rem; 
@@ -107,7 +101,7 @@ h3::before {
     vertical-align: middle; 
 }
 
-/* --- 5. AUTOMATED DESIGN WORKSPACE UTILITIES --- */
+/* --- 6. AUTOMATED DESIGN WORKSPACE UTILITIES --- */
 blockquote {
     background-color: #eff7f0 !important; /* Soft pastel green background */
     border-left: 5px solid #2f8d46 !important; /* Left emerald indicator vertical bar */
@@ -121,7 +115,6 @@ pre {
     border-left: 4px solid #2f8d46 !important;
     padding: 15px !important;
     border-radius: 4px;
-    overflow-x: auto;
 }
 
 img {

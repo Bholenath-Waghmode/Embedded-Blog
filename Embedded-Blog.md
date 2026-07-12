@@ -1,4 +1,63 @@
+---
+layout: default
+title: Technical Vault
+---
+
+<!-- 
+====================================================================================
+📝 INVISIBLE REUSABLE SYMBOLS CHEAT SHEET (HOW TO USE MARKDOWN SYMBOLS)
+This section is a comment. It is completely hidden on your compiled public website!
+====================================================================================
+
+# (Hashtag + Space) 
+-> MAIN WORKBOOK TITLE: Use this exactly ONCE at the absolute top of your document files.
+
+## (Two Hashtags + Space) 
+-> MAJOR CHAPTER DIRECTORIES: Use this to mark distinct major subjects (like Embedded C vs Drivers).
+
+### (Three Hashtags + Space) 
+-> QUESTION MODULE HEADERS: Type this before any question. Your CSS overrides it instantly, 
+   painting it GeeksforGeeks Green and appending a 🟢 dot icon ahead of your line automatically.
+
+--- (Three Dashes in a single row) 
+-> PAGE DIVIDER SEGMENT: Draws a full-width line across screens to slice up separate questions.
+
+* (Asterisk + Space) or - (Dash + Space)
+-> DYNAMIC LINK DIRECTORY BULLETS: Used to map your floating menu items. Indenting these links 
+   using spacing tracks sub-hierarchies ("Embedded C" -> "Questions Answers:" -> "Clickable Link").
+
+> (Greater Than Sign + Space) 
+-> INTERVIEW STUDY CALLOUT BOX: Converts standard paragraphs instantly into green tip containers.
+
+```c ... ``` (Three Backticks on separate rows encapsulation)
+-> SYNTAX HIGH-LIGHTED CODE BLOCKS: Embeds C firmware scripts inside clean engineering boxes.
+
+![Alternate Text Description Here](./images/your_file.png)
+-> AUTOMATED IMAGE CENTERING LOADER: Place this link format to render driver design charts. 
+   Your CSS intercepts this call to center graphics and trace border frames with zero html.
+
+<span class="my-sym">ANY_EMOJI_OR_CHARACTER_HERE</span>
+-> USER-DEFINED VARIABLE SYMBOL: Wrap any custom symbol or icon inside this span tag. 
+   The CSS will format and align it instantly to match your theme!
+
+====================================================================================
+-->
+
 # 🐧 Embedded Engineering Q&A Vault
+
+<!-- 
+  AUTOMATED LEFT-SIDE FLOATING NAVIGATION MENU
+  Use standard text asterisks (*) and spaces to indent your sub-questions.
+  Make sure your (#links) are all lowercase, with dashes instead of spaces.
+-->
+* **Embedded C:**
+  * Questions Answers:
+    * [Q1. What's Volatile?](#q1-whats-volatile)
+* **Device Driver:**
+  * Questions Answers:
+    * [Q1. What's a Device Driver?](#q1-whats-a-device-driver)
+
+---
 
 ## 🛠️ Category: Embedded C
 
@@ -29,3 +88,10 @@ while (*status_reg == 0);
 ![Device Driver Architecture Flowchart](./images/driver_flow.png)
 
 > **Interview Tip:** Writing custom device driver code blocks demands rigorous memory verification methodologies. Because driver processes operate inside un-sandboxed kernel-space boundaries, a single pointer leak or memory race fault will execute a full-scale operating system crash (Kernel Panic).
+```
+
+---
+
+All elements are in place. You can open **GitHub Desktop**, verify the file layout paths match your workspace folder structure, click **Commit**, and choose **Push origin** to launch your clean GeeksforGeeks-style embedded study platform live onto the server. 
+
+Would you like to review how to configure the **repository visibility switch** to verify it is completely public, or are you ready to test the live webpage layout link?
