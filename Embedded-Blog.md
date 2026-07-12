@@ -3,9 +3,9 @@ layout: default
 title: Home Hub
 ---
 
-# 🚀 Welcome to My Embedded Engineering Portal
+# 🚀 Welcome to Preperation Portal
 
-This is my central knowledge repository for low-level systems engineering, firmware optimization, and kernel development notes.
+This is my central knowledge repository for low-level systems engineering Question and Answers.
 
 ### 📚 Available Study Modules
 
