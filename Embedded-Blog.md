@@ -9,7 +9,7 @@ This is my central knowledge repository for low-level systems engineering Questi
 
 ### 📚 Available Study Modules
 
-*   🔗 **[Go to My Embedded C & Device Driver Questions](./Embedded-BlogQList.html)**
+*   🔗 **[Go to My Embedded C & Device Driver Questions](./Embedded-BlogQList.md)**
     *   Click this link to explore my complete, interactive notebook covering memory tracking, register alignments, volatile keywords, and hardware synchronization structures.
 
 ---
