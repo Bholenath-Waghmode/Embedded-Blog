@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Vault</title>
+    <!-- Links your clean, error-free custom layout sheet -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- Loads the secure converter engine that decodes Markdown text on the fly -->
+    <script src="https://jsdelivr.net"></script>
+</head>
+<body>
+
+    <!-- 1. DYNAMIC FLOATING LEFT MENU (Decoded automatically from your Markdown file) -->
+    <nav id="sidebar-menu">
+        <div class="menu-loading">Decoding menu options...</div>
+    </nav>
+
+    <!-- 2. MAIN WORKSPACE CONTAINER FOR YOUR PREPARATION NOTES -->
+    <main id="markdown-content">
+        <p>Fetching your technical notes, please wait...</p>
+    </main>
+
+    <!-- 3. DECODING PIPELINE ENGINE SCRIPT -->
+    <script>
+        // Fetch your clean Markdown content file from your folder path [D1]
+        fetch('./Embedded-Blog.md')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Could not find your Embedded-Blog.md file");
+                }
+                return response.text();
+            })
+            .then(markdownText => {
+                // Convert the Markdown text strings to HTML inside the main container [D2]
+                const contentContainer = document.getElementById('markdown-content');
+                contentContainer.innerHTML = marked.parse(markdownText);
+
+                // Target the sidebar box and clear out the loading text placeholder
+                const sidebar = document.getElementById('sidebar-menu');
+                sidebar.innerHTML = "";
+
+                // Gather all Category Headings (h2) and sub-questions (h3) inside your file
+                const elements = contentContainer.querySelectorAll('h2, h3');
+                let currentSubMenu = null;
+
+                elements.forEach((element) => {
+                    // Create clean, standard URL anchor tracking hashtags for menu jumps
+                    const cleanId = element.textContent.toLowerCase()
+                                           .replace(/[^a-z0-9\s-]/g, '') // Strip emojis
+                                           .trim()
+                                           .replace(/\s+/g, '-');        // Change spaces to dashes
+                    element.id = cleanId;
+
+                    if (element.tagName === 'H2') {
+                        // Injects the category label into the floating side panel
+                        const categoryLabel = document.createElement('strong');
+                        categoryLabel.textContent = element.textContent.replace(/^[^\w\s]+/, '').trim();
+                        sidebar.appendChild(categoryLabel);
+
+                        // Builds the GeeksforGeeks layout wrappers underneath ("Questions Answers:")
+                        const wrapperList = document.createElement('ul');
+                        wrapperList.innerHTML = `<li class="submenu-header">Questions Answers:</li>`;
+                        currentSubMenu = document.createElement('ul'); 
+                        wrapperList.appendChild(currentSubMenu);
+                        sidebar.appendChild(wrapperList);
+                    } 
+                    else if (element.tagName === 'H3' && currentSubMenu) {
+                        // Injects individual questions into the nested sidebar panel links
+                        const listItem = document.createElement('li');
+                        const anchorLink = document.createElement('a');
+                        anchorLink.href = `#${cleanId}`;
+                        anchorLink.textContent = element.textContent.trim();
+                        
+                        listItem.appendChild(anchorLink);
+                        currentSubMenu.appendChild(listItem);
+                    }
+                });
+            })
+            .catch(error => {
+                document.getElementById('markdown-content').innerHTML = `<p style="color:red; font-weight:bold;">Error: ${error.message}</p>`;
+            });
+    </script>
+
+</body>
+</html>
