@@ -92,6 +92,12 @@ while (*status_reg == 0);
 
 ---
 
-All elements are in place. You can open **GitHub Desktop**, verify the file layout paths match your workspace folder structure, click **Commit**, and choose **Push origin** to launch your clean GeeksforGeeks-style embedded study platform live onto the server. 
+### 🚀 Push to Your Server
+1. Open the left sidebar **Source Control Panel** inside VS Code (`Ctrl + Shift + G`).
+2. Click the **`+` (plus sign)** to stage your modifications across your project files.
+3. Type your commit message: `Completed scrollbar engine integration on native jekyll sidebar layout` and select **Commit** > **Push**.
+4. Open your live page layout link (`https://github.io`) and clear your browser cache using **`Ctrl + F5`**.
 
-Would you like to review how to configure the **repository visibility switch** to verify it is completely public, or are you ready to test the live webpage layout link?
+Everything is structurally optimized. Your left side menu will stay completely locked on the screen with its scrolling mechanism active, and all standard theme footprints are hidden! 
+
+Let me know if your browser **renders the clean, independent scrollable side tree layout** perfectly now!

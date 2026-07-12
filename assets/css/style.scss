@@ -1,11 +1,19 @@
 @import "jekyll-theme-cayman";
 
-/* Force hide the theme buttons and footers */
-.btn {
+/* --- 1. FORCE HIDE BOTH TOP THEME BUTTONS & FOOTER TEXT --- */
+.btn,
+header .btn,
+section .btn,
+.page-header .btn {
     display: none !important;
     visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
 }
-.site-footer {
+
+.site-footer,
+footer.site-footer {
     display: none !important;
     visibility: hidden !important;
 }
@@ -18,22 +26,39 @@ body {
     padding: 25px;
     margin-left: 310px; /* Pushes content right to leave room for the left sidebar menu */
     max-width: 750px; /* Keeps text columns narrow and comfortable to read */
+    line-height: 1.6;
 }
 
-/* --- 3. AUTOMATIC MULTI-TIER FLOATING SIDEBAR NAVIGATION MENU --- */
+/* --- 3. AUTOMATIC MULTI-TIER FLOATING SIDEBAR NAVIGATION MENU WITH SCROLLING --- */
 body > ul:first-of-type {
     position: fixed; /* Locks the menu to the screen window so it stays visible while scrolling */
     left: 20px;
     top: 50px;
     width: 260px;
-    max-height: 85vh;
-    overflow-y: auto; /* Adds a scrollbar inside the menu if you have 100+ questions */
+    max-height: 80vh; /* Enforces window height cap limits so the menu can scroll */
+    overflow-y: auto; /* Dynamically activates the vertical scrollbar for 100+ questions */
     padding: 15px;
     background: #ffffff;
     border-radius: 6px;
     border-left: 4px solid #2f8d46; /* Signature GeeksforGeeks Green left border */
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     list-style-type: none; /* Removes standard black list dots from the sidebar menu */
+}
+
+/* --- PREMIUM THEMED SIDEBAR SCROLLBAR CUSTOM STYLES --- */
+body > ul:first-of-type::-webkit-scrollbar {
+    width: 6px; /* Width footprint of the scrolling track slider */
+}
+body > ul:first-of-type::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+body > ul:first-of-type::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+body > ul:first-of-type::-webkit-scrollbar-thumb:hover {
+    background: #2f8d46; /* Turns scrollbar handle green on hover */
 }
 
 body > ul:first-of-type strong {
@@ -85,6 +110,7 @@ h3 {
     border-bottom: 2px solid #e0e0e0; /* Draws a solid separator rule line under questions */
     padding-bottom: 6px;
     margin-top: 30px;
+    scroll-margin-top: 60px; /* Aligns page view safely during link jumps */
 }
 
 h3::before {
@@ -115,6 +141,7 @@ pre {
     border-left: 4px solid #2f8d46 !important;
     padding: 15px !important;
     border-radius: 4px;
+    overflow-x: auto;
 }
 
 img {
