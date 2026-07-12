@@ -89,6 +89,8 @@ while (*status_reg == 0);
 
 > **Interview Tip:** Writing custom device driver code blocks demands rigorous memory verification methodologies. Because driver processes operate inside un-sandboxed kernel-space boundaries, a single pointer leak or memory race fault will execute a full-scale operating system crash (Kernel Panic).
 ```
+
 ---
 
-Next Question is ->
+### 🚀 Next
+
