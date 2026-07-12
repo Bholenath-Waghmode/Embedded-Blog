@@ -6,7 +6,7 @@ remote_theme: jekyll-theme-cayman
 title: Device Driver Interview Prep Vault
 description: Study notes dashboard for low-level development.
 # Add this line so GitHub Pages processes your custom named file
-include: [Embedded-Blog.md]
+#include: [Embedded-Blog.md]
 
 # Forces GitHub to read your style sheet without needing front-matter dashes
 sass:
