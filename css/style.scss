@@ -1,8 +1,6 @@
----
----
-@import "{{ site.theme }}";
+@import "jekyll-theme-cayman";
 
-/* --- 1. FORCE HIDE VIEW ON GITHUB BUTTONS & FOOTER TEXT --- */
+/* Force hide the theme buttons and footers */
 .btn {
     display: none !important;
     visibility: hidden !important;
