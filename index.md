@@ -10,7 +10,7 @@ This is my central knowledge repository for low-level systems engineering, firmw
 ### 📚 Available Study Modules
 
 *   🔗 **[Go to My Embedded C & Device Driver Vault](./Embedded-Blog.html)**
-    *   Click this link to explore my complete, GeeksforGeeks-style interactive notebook covering memory tracking, register alignments, volatile keywords, and hardware synchronization structures.
+    *   Click this link to explore my complete,interactive notebook covering memory tracking, register alignments, volatile keywords, and hardware synchronization structures.
 
 ---
 
