@@ -1210,6 +1210,31 @@ while (*status_reg == 0);
 
 ### Q331. Why You
 * **Ans:** (to be filled later)
+---
+
+# Typical Quetions
+
+### Differentiate CAN Vs LIN?
+
+### What are the supportable type of tasks in Autosar?
+### What are the supportable type of interrrupts in Autosar ? 
+### How do you configure LINIP?
+### Can you write driver interfaces for LIN ?
+### Explain high level block diagram of your current project ?
+### Whats communication channel between gate drive and MCU ?
+### if PMW duty is bellow 50% then its NTC data then if duty is above 50% ?
+
+### How PWM input captured in gate driver CDD ?
+### What interrupt plays role in input capture ?
+### Can you write a structure to initialize lin ip ?
+### What are the differnt memmory sectios in c memory layout ?
+### Consider a fucntion having loval variables where it will go in memory layout ?
+### If function call happens what happens to stack ?
+### what goes to heap area?
+### typedef structure is there where it will go in memeory layout ?
+### Can we pass structure by value in fucntion ?
+### is fucntion prototype you have written are correct ?
+### 
 
 ---
 ```
