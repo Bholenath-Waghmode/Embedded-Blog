@@ -1223,19 +1223,23 @@ while (*status_reg == 0);
 ### Explain high level block diagram of your current project ?
 ### Whats communication channel between gate drive and MCU ?
 ### if PMW duty is bellow 50% then its NTC data then if duty is above 50% ?
-
 ### How PWM input captured in gate driver CDD ?
 ### What interrupt plays role in input capture ?
 ### Can you write a structure to initialize lin ip ?
 ### What are the differnt memmory sectios in c memory layout ?
-### Consider a fucntion having loval variables where it will go in memory layout ?
+### Consider a fucntion having loval variables where it will go in C memory layout ?
 ### If function call happens what happens to stack ?
 ### what goes to heap area?
 ### typedef structure is there where it will go in memeory layout ?
-### Can we pass structure by value in fucntion ?
-### is fucntion prototype you have written are correct ?
+### Can we pass structure by value in function ?
+### is fucntion prototype you have written is correct ?
+### Why startup code is in assmembly, whay its not in C ?
+### How you ensure your tasks are getting called as per functional safety point of view ?
+### What is size of your structure that you have written ?
+### What happens to stack when you call function ?
+### Do you bit stuffing in CAN ?
+### On Physical layer whats difference in CAN and LIN ?
 ### 
-
 ---
 ```
 
